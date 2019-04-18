@@ -32,6 +32,9 @@ a {
   p {
     max-width: 500px;
   }
+  &__video {
+    display: none;
+  }
 }
 
 .past-clients {
