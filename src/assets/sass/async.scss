@@ -1,0 +1,96 @@
+@import 'variables';
+
+.fade-07 {
+  animation: fade .7s cubic-bezier(0, 0, .4, 1) forwards;
+}
+
+.preload-fader {
+  opacity: 0;
+  will-change: opacity;
+  &--faded {
+    animation: fade .7s cubic-bezier(0, 0, .4, 1) forwards;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+a:hover {
+  color: lighten($primary, 18);
+}
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  &__video {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    &--faded {
+      animation: homehero-fs .7s cubic-bezier(0, 0, .4, 1) forwards;
+    }
+    &-promo {
+      opacity: 0;
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 9;
+  }
+}
+
+@keyframes homehero-fs {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  to {
+    opacity: .05;
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+}
+
+.client {
+  display: inline-block;
+  padding: 25px;
+  &-image {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: grayscale(100%);
+    transition: filter .3s ease;
+    will-change: filter;
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.footer__link {
+  transition: opacity .25s ease;
+  will-change: opacity;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.footer__copy a {
+  transition: opacity .25s ease;
+  will-change: opacity;
+  &:hover {
+    opacity: 1;
+  }
+}
