@@ -1,0 +1,27 @@
+$breakpoint-md: 768px;
+
+$light: #eee;
+$dark: #1b1d20;
+
+@mixin light-theme {
+    --background: var(--light);
+    --text: var(--dark);
+}
+
+@mixin dark-theme {
+    --background: var(--dark);
+    --text: var(--light);
+}
+
+:root {
+    --light: #eee;
+    --dark: #1b1d20;
+
+    @include light-theme();
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not(.toggle-theme) {
+        @include dark-theme();
+    }
+}

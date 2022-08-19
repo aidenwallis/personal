@@ -1,0 +1,7 @@
+node_modules/
+npm-error.log
+.parcel-cache/
+dist/
+
+# Use yarn
+package-lock.json

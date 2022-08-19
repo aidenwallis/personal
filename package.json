@@ -1,0 +1,15 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "repository": "https://github.com/aidenwallis/personal.git",
+  "author": "Aiden <aiden@aidenwallis.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
