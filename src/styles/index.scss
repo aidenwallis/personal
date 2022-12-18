@@ -17,6 +17,11 @@ svg {
     margin-bottom: 2.4rem;
 }
 
+h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
 h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -25,6 +30,16 @@ h3 {
 h4 {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+strong {
+    font-weight: 700;
 }
 
 .container {
@@ -65,5 +80,40 @@ ul {
         &:hover {
             opacity: 1;
         }
+    }
+}
+
+#the-elon-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark-alpha);
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.inner-container {
+    max-width: 42rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+button {
+    background: #000;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--light);
+    &:hover {
+        opacity: .75;
     }
 }

@@ -24,5 +24,39 @@
             </div>
         </div>
     </div>
+    <div id="the-elon-modal">
+        <div class="container">
+            <div class="inner">
+                <div class="inner-container">
+                    <h1>Wait!</h1>
+                    <p>Okay this is really important and I have to do this because <a href="https://twitter.com/TwitterSupport/status/1604531261791522817" target="_blank" rel="noopener noreferrer">Elon got a little mad</a>, but you understand that this is totally and <strong>definitely NOT a link aggregator, right???</strong></p>
+                    <button id="the-self-destructor">Sure, I don't see how it could be!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (() => {
+            const modal = document.getElementById("the-elon-modal");
+            const acceptKey = "elonified";
+
+            const close = () => {
+                modal.remove();
+            };
+
+            if (localStorage.getItem(acceptKey)) {
+                close();
+                return;
+            }
+
+            const accept = () => {
+                localStorage.setItem(acceptKey, "true");
+                close();
+            };
+
+            modal.classList.add("show");
+            document.getElementById("the-self-destructor").onclick = accept;
+        })();
+    </script>
 </body>
 </html>
