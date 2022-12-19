@@ -5,21 +5,17 @@ $dark: #1b1d20;
 
 @mixin light-theme {
     --background: var(--light);
-    --background-alpha: var(--light-alpha);
     --text: var(--dark);
 }
 
 @mixin dark-theme {
     --background: var(--dark);
-    --background-alpha: var(--dark-alpha);
     --text: var(--light);
 }
 
 :root {
     --light: #eee;
-    --light-alpha: #{rgba(#eee, .95)};
     --dark: #1b1d20;
-    --dark-alpha: #{rgba(#1b1d20, .95)};
 
     @include light-theme();
 }
